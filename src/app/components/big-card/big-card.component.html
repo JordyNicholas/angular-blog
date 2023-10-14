@@ -3,7 +3,7 @@
   <!-- mockado -->
     <div class="big-card__photo">
       <img
-      src="https://prod.assets.earlygamecdn.com/images/black-panther-chadwick-boseman.jpg?mtime=1652074350"
+      src="{{ photoCover }}"
       alt=""
       height="250px"
       srcset=""
@@ -11,13 +11,13 @@
     </div>
 
     <div class="big-card__title">
-      <h1><a href="http://localhost:4200">Saiu a nova versão do Angular!</a></h1>
+      <h1><a href="http://localhost:4200">{{ cardTitle }}</a></h1>
     </div>
 
     <div class="big-card__description">
       <p>
         <a href="">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        {{ cardDescription }}
         </a>
       </p>
     </div>
