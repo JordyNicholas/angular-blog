@@ -10,19 +10,21 @@ import { dataFake } from '../../data/dataFake'
 })
 export class ContentComponent implements OnInit{
   @Input()
-  photoCover:string="https://diariodorio.com/wp-content/uploads/2021/05/critica-mortalkombat-filme.jpg"
+  photoCover:string=""
 
   @Input()
-  contentTitle:string="jop jopista"
+  contentTitle:string=""
 
   @Input()
-  contentDescription:string="jop jopero"
+  contentDescription:string=""
+
+  @Input()
+  externalLink:string=""
 
   private id: string | null = "0"
 
 
-  constructor(private route: ActivatedRoute){
-  }
+  constructor(private route: ActivatedRoute){}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe( value =>
@@ -39,6 +41,7 @@ export class ContentComponent implements OnInit{
       this.contentTitle = result.title
       this.contentDescription = result.description
       this.photoCover = result.photoCover
+      this.externalLink = result.externalLink
 
   }
 }
